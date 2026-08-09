@@ -12,12 +12,12 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=SimHei:300,300italic,400,400italic,700,700italic|FangSong:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
   <meta name="description" content="又一篇galgame，借此写一下文学史，顺带提一下小说中的人物元素。属性：催泪、纯爱、治愈、【血腥、重口】Euphoria  n.短时间极度愉快的心情  （网）欣快症。起的名有趣，euphoria一词在医学中可以表述为药物成瘾的病态欢乐（合欢线）在文学、社会学中可以理解成群体狂热情绪（凛音线）本作品剧情平平，人物做的倒不错。galgame女主就要做到性格全收集啊喵时羽梨香社团学妹，本是尊重男主的后">
@@ -28,9 +28,9 @@
 <meta property="og:description" content="又一篇galgame，借此写一下文学史，顺带提一下小说中的人物元素。属性：催泪、纯爱、治愈、【血腥、重口】Euphoria  n.短时间极度愉快的心情  （网）欣快症。起的名有趣，euphoria一词在医学中可以表述为药物成瘾的病态欢乐（合欢线）在文学、社会学中可以理解成群体狂热情绪（凛音线）本作品剧情平平，人物做的倒不错。galgame女主就要做到性格全收集啊喵时羽梨香社团学妹，本是尊重男主的后">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-08-09T12:32:36.841Z">
-<meta property="article:modified_time" content="2026-08-09T14:15:31.765Z">
+<meta property="article:modified_time" content="2026-08-09T14:37:19.096Z">
 <meta property="article:author" content="caoyahan">
-<meta property="article:tag" content="game">
+<meta property="article:tag" content="游戏文学">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://example.com/2026/08/09/Euphoria/">
@@ -104,6 +104,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -133,11 +134,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -185,7 +213,16 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2026-08-09 20:32:36 / 修改时间：22:15:31" itemprop="dateCreated datePublished" datetime="2026-08-09T20:32:36+08:00">2026-08-09</time>
+              <time title="创建时间：2026-08-09 20:32:36 / 修改时间：22:37:19" itemprop="dateCreated datePublished" datetime="2026-08-09T20:32:36+08:00">2026-08-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%96%87%E5%AD%A6%E7%90%86%E8%AE%BA/" itemprop="url" rel="index"><span itemprop="name">文学理论</span></a>
+                </span>
             </span>
 
           
@@ -216,7 +253,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%B8%B8%E6%88%8F%E6%96%87%E5%AD%A6/" rel="tag"># game</a>
+              <a href="/tags/%E6%B8%B8%E6%88%8F%E6%96%87%E5%AD%A6/" rel="tag"># 游戏文学</a>
           </div>
 
         
@@ -305,13 +342,21 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-      <div class="site-state-item site-state-tags">
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">标签</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -367,7 +412,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -378,6 +423,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 
